@@ -1,0 +1,100 @@
+/*Feuille de style du TP2 JS Cédric Devost*/
+
+/*Mise en page générale*/
+#page2 ul li {
+    margin: 10px;
+    width: 130px;
+}
+
+span{
+    padding-left: 20px;
+}
+
+#page 3 ol li:nth-child(3){
+    width: 600px;
+}
+
+/*relatif aux flèches ce qu'il y a en dessous*/
+#conteneurFleches{
+    width: 40px;
+    height: 130px;
+    position: relative;
+    bottom: 90px;
+    left: 120px;
+}
+
+#fleche2{
+    position: relative;
+    top: 30px;
+}
+#fleche3{
+    position: relative;
+    top: 10px;
+    left: 20px;
+}
+#fleche4{
+    position: relative;
+    top: 40px;
+}
+
+#fleche1, #fleche2 {
+    border-top: 20px solid red;
+    border-right: 10px solid transparent;
+    border-left: 10px solid transparent;
+    float: right;
+    
+}
+
+#fleche4, #fleche3 {
+    border-bottom: 20px solid red;
+    border-right: 10px solid transparent;
+    border-left: 10px solid transparent;
+    float: right;
+}
+
+/*relatif au drag and drop tout ce qu'il y a en dessous*/
+#carre1{
+    width: 250px;
+    height: 250px;
+    background-color: aqua;
+}
+
+#carre2{
+    width: 250px;
+    height: 230px;
+    background-color: beige;
+    position: relative;
+    bottom: 250px;
+    left: 300px;
+}
+
+#img1{
+    width: 120px;
+    height: 120px;
+    margin-left: 20px;
+    margin-top: 20px;
+}
+
+#img2{
+    width: 120px;
+    height: 120px;
+    position: relative;
+    left: 120px;
+    bottom: 120px;
+}
+
+#img3{
+    width: 120px;
+    height: 120px;
+    position: relative;
+    left: 125px;
+    bottom: 130px;
+}
+
+#img4{
+    width: 120px;
+    height: 120px;
+    position: relative;
+    left: 20px;
+    bottom: 250px;
+}

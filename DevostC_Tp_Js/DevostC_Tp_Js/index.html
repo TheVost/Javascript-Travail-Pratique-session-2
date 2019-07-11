@@ -1,0 +1,169 @@
+<!DOCTYPE HTML>
+<html lang="fr">
+
+<!--
+Auteur: Cédric Devost
+Date: 2018-12-10
+Lien: script.js
+Description: page SinglePage pour le TP2 du cours de javascript
+-->
+    
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="keywords" content="x, y">
+    <meta name="author" content="Cédric Devost">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <title>TP2 Javascript</title>
+</head>
+
+<body>
+    
+    <!-- La page 1 -->
+    <div id="page1">
+        <h1>Test d'Embauche Programmeur Web</h1>
+
+        <button id="commencer">Commencer</button>
+    </div>
+    
+    <!-- La page 2 -->
+    <div id="page2">
+        <h2>Identification</h2>
+
+        <!-- formulaire pour la saisie des infos personnelles -->
+        <form name="formId">
+            <label>Nom</label>
+            <input type="text" name="nom" /><br />
+            <label>Prénom</label>
+            <input type="text" name="prenom" /><br />
+            <label>Citoyenneté</label>
+            <select>
+                <option>Canadienne</option>
+                <option>Résident Permanent</option>
+                <option>Résident Temporaire</option>
+            </select>
+        </form>
+
+        <h2>Coordonnées</h2>
+
+        <!-- formulaire pour la saisie des infos personnelles (suite) -->
+        <form name="formCoo">
+            <label>Courriel</label>
+            <input type="text" name="courriel" /><br />
+            <label>Adresse</label>
+            <textarea name="adresse"></textarea><span>1000 caractères restants</span><br />
+            <label>Pays</label>
+            <select>
+                <option>Canada</option>
+                <option>États-Unis</option>
+                <option>Mexique</option>
+            </select><br />
+            <label>Province</label>
+            <select>
+                <option>Québec</option>
+                <option>Saskatchewan</option>
+                <option>Manitoba</option>
+            </select><br />
+            <label>Code Postal</label>
+            <input type="text" name="cp" /><br />
+            <label>Numéro de Téléphone</label>
+            <input type="text" name="tel" />
+        </form>
+
+        <!-- Section pour la ville de préférence -->
+        <p>Donner votre choix de ville d'emploi par ordre de préférence</p>
+        <ul>
+            <li>Toronto</li>
+            <li>Montréal</li>
+            <li>Québec</li>
+        </ul>
+        
+        <!-- divs formant les flèches pour le choix -->
+        <div id="conteneurFleches">
+            <div id="fleche1"></div>
+            <div id="fleche2"></div>
+            <div id="fleche4"></div>
+            <div id="fleche3"></div>
+        </div>
+        <button id="goPage3">Poursuivre</button>
+    </div>
+    
+    <!-- La page 3 -->
+    <div id="page3">
+        <h2>Quiz</h2>
+        <ol>
+            
+            <!-- question 1 du quizz -->
+            <li>Comment récupérer le contnue textuel d'un élément HMTL?
+                <form>
+                    <input type="radio" name="question1" />
+                    <label>contentText</label><br />
+                    <input type="radio" name="question1" />
+                    <label>innerHTML</label><br />
+                    <input type="radio" name="question1" />
+                    <label>value</label><br />
+                    <input type="radio" name="question1" />
+                    <label>textContent</label>
+                </form>
+            </li>
+            
+            <!-- question 2 du quizz -->
+            <li>Trouvez les affirmations vraies à propos du DOM.
+                <form>
+                    <input type="checkbox" name="question2" />
+                    <label>Le DOM est une représentation de la structure d’une page web sous la forme d’une
+                        hiérarchie de noeuds.</label><br />
+                    <input type="checkbox" name="question2" />
+                    <label>Le DOM est spécifique à chaque navigateur.</label><br />
+                    <input type="checkbox" name="question2" />
+                    <label>Le DOM est une API qui permet d’interagir avec la page web.</label><br />
+                    <input type="checkbox" name="question2" />
+                    <label>Chaque noeud du DOM correspond en JavaScript à un tableau.</label>
+                </form>
+            </li>
+            
+            <!-- question 3 du quizz (drag and drop)-->
+            <li>Déplacer les images qui se trouvent sur le carré vert vers le carré beige en les plaçant par ordre pour reconstruire le visage du Javascript
+                <div id="carre1">
+                    <img id="drag1" draggable="true" ondragstart="drag(event)" src="images/partie4.jpg" alt="partie4" />
+                    <img id="drag2" draggable="true" ondragstart="drag(event)" src="images/partie1.jpg" alt="partie1" />
+                    <img id="drag3" draggable="true" ondragstart="drag(event)" src="images/partie3.jpg" alt="partie3" />
+                    <img id="drag4" draggable="true" ondragstart="drag(event)" src="images/partie2.jpg" alt="partie2" />
+                </div>
+                
+                <!-- recepteur du drag and drop -->
+                <div id="carre2" ondrop="drop(event)" ondragover="allowDrop(event)">
+                    <div id="img1" ></div>
+                    <div id="img2" ></div>
+                    <div id="img3" ></div>
+                    <div id="img4" ></div>
+                </div>
+            </li>
+        </ol>
+
+        <button id="goPage2">Retour</button>
+
+        <button id="goPage4">Terminer</button>
+    </div>
+    
+    <!-- La page 4 -->
+    <div id="page4">
+        <h2>Sommaire des informations personnelles</h2>
+        <p>Merci d'avoir appliqué pour le poste de programmeur Web. <br />
+            Seules les personnes retenues seront avisées par courriel ou par téléphone.</p>
+
+        <!-- endroit qui recevra le sommaire des informations -->
+        <p>Nom : </p>
+        <p>Prénom : </p>
+        <p>Courriel : </p>
+        <p>Téléphone : </p>
+
+        <!-- pour le submit de la page -->
+        <form method="get" ><input type="submit" value="Envoyer"></form>
+    </div>
+
+    <!-- référence à la page de scripts -->
+    <script src="scripts.js"></script>
+</body>
+
+</html>
